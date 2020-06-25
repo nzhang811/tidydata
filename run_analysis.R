@@ -48,5 +48,5 @@ allres$subject <- as.factor(allres$subject)
 means <- allres %>% group_by(activity, subject) %>% summarise_all(mean)
 
 write.table(means, "tidy.txt", append = FALSE, sep = " ", dec = ".",
-            row.names = TRUE, col.names = TRUE)
+            row.names = FALSE)
 
